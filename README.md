@@ -49,7 +49,6 @@ This exercise simulates the initial steps of professional risk assessment and bu
 - Named the scan `New_Scan`.
 - Defined target IP as `192.168.31.182` to scan the host system.
 - Saved and launched the scan.
-![WhatsApp Image 2025-06-26 at 17 33 39_2294127d](https://github.com/user-attachments/assets/ce84bc7e-245c-410e-93ea-d13a1fe4b1bc)
 
 ### 3. Scan Results
 - The scan completed in ~40 minutes.
