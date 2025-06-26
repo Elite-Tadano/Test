@@ -21,7 +21,7 @@ This exercise simulates the initial steps of professional risk assessment and bu
 
 ---
 
-## 🧰 Tools & Environment
+## Tools & Environment
 
 | Tool              | Details |
 |------------------|---------|
@@ -56,38 +56,34 @@ This exercise simulates the initial steps of professional risk assessment and bu
 - The scan completed in ~40 minutes.
 - Discovered multiple vulnerabilities across medium, and low severity.
 - Captured key details and screenshots for documentation.
-![WhatsApp Image 2025-06-26 at 17 33 39_890423a9](https://github.com/user-attachments/assets/e73d6385-c103-4c33-9a86-1fdf35864ed2)
+![image](https://github.com/user-attachments/assets/19f0db7a-0847-4088-a933-82711a48067a)
 
 ---
 
 ## Summary of Findings
 
-| Severity | Total Issues | Example Vulnerabilities                  |
+| Severity | Total Issues | Vulnerabilities                          |
 |----------|--------------|------------------------------------------|
-| Medium   | 7            | SSL/TLS Weak Cipher Suites               |
+| Medium   | 4            | SMB Signing not required                 |
 | Low      | 10+          | Missing Headers, Deprecated Services     |
 
 > All vulnerability descriptions were cross-referenced with [NIST NVD](https://nvd.nist.gov/) and CVSS scoring methodology.
+![image](https://github.com/user-attachments/assets/6c57985f-8d3a-4560-b38e-3f05b9a46c30)
+![image](https://github.com/user-attachments/assets/fb692362-ec3e-45fb-afe0-273850a41f9b)
+![image](https://github.com/user-attachments/assets/1c56b123-0a9f-4275-8e22-4a415779201c)
+![image](https://github.com/user-attachments/assets/48aaab31-017b-49bc-ad30-78a3f8a02c51)
 
 ---
 
-## 🩹 Remediation Strategy
+## Remediation Strategy
 
-### 🔴 Critical:
-- **Disabled SMBv1** via Windows Features and Registry edits.
-- Ensured remote code execution flaws were patched by running Windows Update.
-
-### 🟠 High:
-- Manually updated all outdated software: browsers, runtimes (Java, .NET), etc.
-- Reviewed Windows Defender settings to enforce stricter application control.
-
-### 🟡 Medium & Low:
-- Planned to apply registry-level changes to enforce secure TLS versions.
-- Documented informational issues for future hardening.
+### Medium & Low:
+- Enforce message signing in the host's configuration. On Windows, this is found in the policy setting 'Microsoft network server: Digitally sign communications (always)'. On Samba, the setting is called 'server signing'. See the 'see also' links for further details.
+- Purchase or generate a proper SSL certificate for this service.
 
 ---
 
-## 🧠 Key Takeaways
+## Key Takeaways
 
 - Gained practical exposure to Nessus and automated scanning techniques.
 - Learned to interpret vulnerability metadata: **Plugin ID**, **CVE ID**, **CVSS**, and **solution references**.
@@ -97,5 +93,16 @@ This exercise simulates the initial steps of professional risk assessment and bu
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
+```
+├── Nessus-Report (exported report)
+├── README.md
+```
 
+---
+
+## Final Thoughts
+
+This task strengthened my foundational skills in vulnerability management and gave me insight into how enterprise security tools help reduce risk through automated detection and proactive remediation.
+
+> 🧠 *Cybersecurity is not a one-time action, but an ongoing process of identifying, understanding, and mitigating threats.*
